@@ -27,7 +27,6 @@ Route::post('register', [UsersControllerAPI::class, 'register']);
 Route::post('order-add', [UsersControllerAPI::class, 'orderAdd']);
 Route::post('product-add', [UsersControllerAPI::class, 'productAdd']);
 
-
 Route::post('reset-password', [UsersControllerAPI::class, 'resetPassword']);
 
 
@@ -37,6 +36,5 @@ Route::get('search-orders', [OrdersControllerAPI::class, 'searchOrders']);
 
 
 Route::get('products-api', [ProductsControllerAPI::class, 'productsAPI']);
-
 
 Route::get('sales-api', [Sales_DetailsControllerAPI::class, 'salesAPI']);

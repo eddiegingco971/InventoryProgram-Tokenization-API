@@ -18,22 +18,22 @@ class OrdersControllerAPI extends Controller {
         $token = $request['t']; // t = token
         $user_id = $request['cashier']; // u = user_id
 
-          // $orders = DB::table('orders')
-        //     ->leftJOIN('products', 'orders.product_id', '=', 'products.id')
-        //     ->select( 'orders.order_name','orders.address','products.product_name','orders.quantity_order', 'orders.created_at','orders.updated_at')
-        //     ->get();
-
-        //     return response()->json($orders, $this->successStatus);
-
-        $users = User::where('id', $user_id)->where('remember_token', $token)->first();
-
-        if ($users != null) {
-            $orders = Orders::all();
+          $orders = DB::table('orders')
+            ->leftJOIN('products', 'orders.product_id', '=', 'products.id')
+            ->select( 'orders.order_name','orders.address','products.product_name','orders.quantity_order', 'orders.created_at','orders.updated_at')
+            ->get();
 
             return response()->json($orders, $this->successStatus);
-        } else {
-            return response()->json(['response' => 'Bad Call'], 501);
-        }        
+
+        // $users = User::where('id', $user_id)->where('remember_token', $token)->first();
+
+        // if ($users != null) {
+        //     $orders = Orders::all();
+
+        //     return response()->json($orders, $this->successStatus);
+        // } else {
+        //     return response()->json(['response' => 'Bad Call'], 501);
+        // }        
     }
 
    

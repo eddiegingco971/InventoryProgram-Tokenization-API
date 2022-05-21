@@ -33,3 +33,5 @@
     {!! Form::label('stock', 'Stock:') !!}
     {!! Form::number('stock', null, ['class' => 'form-control']) !!}
 </div>
+
+<input type="hidden" name="user_id" value="{{Auth::id() }}">

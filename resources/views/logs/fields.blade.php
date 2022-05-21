@@ -21,3 +21,5 @@
     {!! Form::label('logtype', 'Logtype:') !!}
     {!! Form::text('logtype', null, ['class' => 'form-control','maxlength' => 100,'maxlength' => 100]) !!}
 </div>
+
+<input type="hidden" name="user_id" value="{{Auth::id() }}">

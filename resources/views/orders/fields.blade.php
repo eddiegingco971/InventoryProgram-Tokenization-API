@@ -22,4 +22,4 @@
     {!! Form::number('quantity_order', null, ['class' => 'form-control']) !!}
 </div>
 
-{{-- <input type="hidden" name="user_id" value="{{Auth::id() }}"> --}}
+<input type="hidden" name="user_id" value="{{Auth::id() }}">

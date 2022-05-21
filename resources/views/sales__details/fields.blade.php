@@ -21,3 +21,5 @@
     {!! Form::label('Total_amount', 'Total Amount:') !!}
     {!! Form::number('Total_amount', null, ['class' => 'form-control']) !!}
 </div>
+
+<input type="hidden" name="user_id" value="{{Auth::id() }}">

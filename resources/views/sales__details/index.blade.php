@@ -37,12 +37,12 @@
         </div>
     </div>
 
-    {{-- <div class="content px-4 d-grid gap-2  mx-auto">
+    <div class="content px-4 d-grid gap-2  mx-auto">
         <div class="row">
             <a class="btn btn-info col-6" href="<?= url('/products') ?>" role="button">Go back to the Products</a>
             <a class="btn btn-info col-6" href="<?= url('/home') ?>" role="button">Get back to the Homepage</a>
         </div>
-    </div> --}}
+    </div>
 
 @endsection
 
